@@ -1,5 +1,30 @@
-/*
-This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+.toc {
+    padding: 14px;
+    border: solid 1px lightgray;
+    /* font-size: 12px; */
+    font-size: 0.85rem;
+}
+@media (min-width: 1280px) {
+    .toc {
+        position: sticky;
+        float: left;
+        --toc-left: calc(100vw / 50);
+        left: var(--toc-left); /* _minimum_ distance from left screen border */
+        top: 100px;
+        margin-left: -1000px; /* overruled by left */
 
-Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
-*/
+        width: calc((100vw - var(--main-width) - 2 * var(--gap)) / 2 - 2 * var(--toc-left));
+        padding: 14px;
+        border: solid 1px lightgray;
+        
+        /* font-size: 12px; */
+        max-width: 500px;
+    }
+    .toc .inner {
+        padding: 0;
+    }
+    .toc details summary {
+        margin-inline-start: 0;
+        margin-bottom: 10px;
+    }
+}
